@@ -21,10 +21,7 @@ public class BaseUI : MonoBehaviour
     {
         Debug.Log($"{GetType()}::{nameof(Init)}");
 
-        _actionOnShow = null;
-        _actionOnClose = null;
-
-        transform.SetParent(canvas, false);  // worldPositionStays=false로 위치 초기화 편리하게
+        transform.SetParent(canvas, false);  // 위치 초기화 쉽게
 
         if (transform is RectTransform rectTransform)
         {
@@ -34,6 +31,9 @@ public class BaseUI : MonoBehaviour
             rectTransform.offsetMin = Vector2.zero;
             rectTransform.offsetMax = Vector2.zero;
         }
+
+        _actionOnShow = null;
+        _actionOnClose = null;
     }
 
     // 외부에서 넘겨준 UI 데이터 세팅
@@ -54,19 +54,19 @@ public class BaseUI : MonoBehaviour
     // UI를 보여주는 함수
     public virtual void Show()
     {
-        if (AnimOnOpen != null)
+        if (AnimOnOpen != null && !AnimOnOpen.isPlaying)
         {
             AnimOnOpen.Play();
         }
 
         _actionOnShow?.Invoke();
-        _actionOnShow = null;
+        _actionOnShow = null;  // 중복 호출 방지
     }
 
     // UI를 닫는 함수
     public virtual void Close(bool isCloseAll = false)
     {
-        if (!isCloseAll)
+        if (isCloseAll == false)
         {
             _actionOnClose?.Invoke();
         }

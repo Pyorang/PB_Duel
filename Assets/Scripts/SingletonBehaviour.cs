@@ -14,10 +14,7 @@ public class SingletonBehaviour<T> : MonoBehaviour where T : SingletonBehaviour<
     public static T Instance => s_instance;
 
     // Unity의 Awake 콜백 메서드, 오브젝트가 생성될 때 호출됨
-    private void Awake()
-    {
-        Init();
-    }
+    private void Awake() => Init();
 
     // 싱글톤 인스턴스 초기화 메서드
     protected virtual void Init()
@@ -33,21 +30,13 @@ public class SingletonBehaviour<T> : MonoBehaviour where T : SingletonBehaviour<
         s_instance = this as T;
 
         // IsDestroyOnLoad가 false일 경우 씬 전환 시 파괴되지 않도록 설정
-        if (IsDestroyOnLoad == false)
-        {
+        if (!IsDestroyOnLoad)
             DontDestroyOnLoad(gameObject);
-        }
     }
 
     // 오브젝트가 파괴될 때 호출되는 콜백 메서드
-    private void OnDestroy()
-    {
-        Dispose();
-    }
+    private void OnDestroy() => Dispose();
 
     // 싱글톤 인스턴스를 해제하는 가상 메서드
-    protected virtual void Dispose()
-    {
-        s_instance = null;
-    }
+    protected virtual void Dispose() => s_instance = null;
 }

@@ -22,10 +22,8 @@ public class UIManager : SingletonBehaviour<UIManager>
     // 현재 활성화된 UI 중 특정 타입의 UI를 반환 (없으면 null)
     public BaseUI GetActiveUI<T>() where T : BaseUI
     {
-        var uiType = typeof(T);
-        if (_openUIPool.TryGetValue(uiType, out var ui))
-            return ui;
-        return null;
+        _openUIPool.TryGetValue(typeof(T), out var ui);
+        return ui;
     }
 
     // 가장 위에 떠 있는 UI 반환
@@ -34,14 +32,28 @@ public class UIManager : SingletonBehaviour<UIManager>
     // 현재 열린 UI가 하나라도 있는지 여부 반환
     public bool ExistAnyOpenUI() => _frontUI != null;
 
+    // 가장 위에 있는 UI 닫기
+    public void CloseFrontUI()
+    {
+        _frontUI?.Close();
+    }
+
+    // 열려있는 모든 UI를 순차적으로 닫기
+    public void CloseAllUI()
+    {
+        while (_frontUI != null)
+        {
+            _frontUI.Close();
+        }
+    }
+
     // UI 열기: 존재하면 재사용, 아니면 새로 생성 후 활성화
     public void OpenUI<T>(BaseUIData data) where T : BaseUI
     {
         var uiType = typeof(T);
         Debug.Log($"{GetType()}::{nameof(OpenUI)}({uiType})");
 
-        bool isAlreadyOpen;
-        BaseUI ui = GetUI<T>(out isAlreadyOpen);
+        var ui = GetUI<T>(out bool isAlreadyOpen);
 
         if (ui == null)
         {
@@ -78,26 +90,11 @@ public class UIManager : SingletonBehaviour<UIManager>
 
         _frontUI = null;
 
+        // 가장 위에 있는 UI를 다시 찾기
         if (CanvasTransform.childCount > 0)
         {
             var lastChild = CanvasTransform.GetChild(CanvasTransform.childCount - 1);
             _frontUI = lastChild.GetComponent<BaseUI>();
-        }
-    }
-
-    // 가장 위에 있는 UI 닫기
-    public void CloseFrontUI()
-    {
-        if (_frontUI != null)
-            _frontUI.Close();
-    }
-
-    // 열려있는 모든 UI를 순차적으로 닫기
-    public void CloseAllUI()
-    {
-        while (_frontUI != null)
-        {
-            _frontUI.Close();
         }
     }
 
@@ -111,23 +108,22 @@ public class UIManager : SingletonBehaviour<UIManager>
             isAlreadyOpen = true;
             return activeUI;
         }
-        else if (_closeUIPool.TryGetValue(uiType, out var closedUI))
+
+        if (_closeUIPool.TryGetValue(uiType, out var closedUI))
         {
             isAlreadyOpen = false;
             return closedUI;
         }
-        else
+
+        var prefab = Resources.Load<BaseUI>($"UI/{uiType}");
+        if (prefab == null)
         {
-            var prefab = Resources.Load<BaseUI>($"UI/{uiType}");
-            if (prefab == null)
-            {
-                isAlreadyOpen = false;
-                Debug.LogWarning($"{uiType} 프리팹을 찾을 수 없습니다.");  
-                return null;
-            }
-            var instance = Instantiate(prefab);
             isAlreadyOpen = false;
-            return instance;
+            Debug.LogWarning($"{uiType} 프리팹을 찾을 수 없습니다.");
+            return null;
         }
+
+        isAlreadyOpen = false;
+        return Instantiate(prefab);
     }
 }
