@@ -286,6 +286,7 @@ MonoBehaviour:
   _title: {fileID: 3253709054061010605}
   _progressBar: {fileID: 192133812041074278}
   _progressBarText: {fileID: 3142840158465252081}
+  _loadingCompleteText: {fileID: 2189974828305181541}
   _pressAnyKeyText: {fileID: 4009706032317678669}
   _pressAnyKeyAnimator: {fileID: 9125436610118500370}
 --- !u!1 &3747961065969566237

@@ -7,7 +7,9 @@ public class TitleManager : MonoBehaviour
 {
     [SerializeField] private GameObject _title;                // 타이틀 UI 오브젝트
     [SerializeField] private Slider _progressBar;              // 로딩 프로그레스 바 슬라이더
-    [SerializeField] private TextMeshProUGUI _progressBarText; // 프로그레스 바 옆에 표시할 % 텍스트
+    [SerializeField] private TextMeshProUGUI _progressBarText; // 로딩 텍스트
+    [SerializeField] private TextMeshProUGUI _loadingCompleteText; // 로딩 완료 텍스트
+
     private int dotCount = 0;
 
     [SerializeField] private TextMeshProUGUI _pressAnyKeyText; // 아무 키 입력 텍스트
@@ -18,7 +20,9 @@ public class TitleManager : MonoBehaviour
 
     private void Awake()
     {
+        // 게임오브젝트 숨기기
         _title.SetActive(false);
+        _loadingCompleteText.gameObject.SetActive(false);
         _pressAnyKeyText.gameObject.SetActive(false);
    
 
@@ -64,6 +68,9 @@ public class TitleManager : MonoBehaviour
                 _isLoadingComplete = true;
                 // 로딩중 텍스트 끄기
                 _progressBarText.gameObject.SetActive(false);
+                // 로딩 완료 텍스트 켜기
+                _loadingCompleteText.gameObject.SetActive(true); 
+
                 // 메시지 및 애니메이션 표시
                 _pressAnyKeyText.gameObject.SetActive(true);
                 _pressAnyKeyAnimator.SetBool("isLoadingComplete",true);
