@@ -5,27 +5,25 @@ using TMPro;
 
 public class TitleManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _title;                // 타이틀 UI 오브젝트
-    [SerializeField] private Slider _progressBar;              // 로딩 프로그레스 바 슬라이더
-    [SerializeField] private TextMeshProUGUI _progressBarText; // 로딩 텍스트
-    [SerializeField] private TextMeshProUGUI _loadingCompleteText; // 로딩 완료 텍스트
+    [SerializeField] private GameObject _title;
+    [SerializeField] private Slider _progressBar;
+    [SerializeField] private TextMeshProUGUI _progressBarText;
+    [SerializeField] private TextMeshProUGUI _loadingCompleteText;
+    [SerializeField] private TextMeshProUGUI _pressAnyKeyText;
+    [SerializeField] private Animator _pressAnyKeyAnimator;
 
-    private int dotCount = 0;
-
-    [SerializeField] private TextMeshProUGUI _pressAnyKeyText; // 아무 키 입력 텍스트
-    [SerializeField] private Animator _pressAnyKeyAnimator;// 애니메이션 오브젝트
-    private bool _isLoadingComplete = false;
     private Animator _titleAnimator;
-
+    private bool _isLoadingComplete = false;
+    private int _dotCount = 0;
 
     private void Awake()
     {
-        // 게임오브젝트 숨기기
+        // 초기 UI 비활성화
         _title.SetActive(false);
         _loadingCompleteText.gameObject.SetActive(false);
         _pressAnyKeyText.gameObject.SetActive(false);
-   
 
+        // 타이틀 오브젝트에서 Animator 가져오기
         var titleObj = transform.Find("TitleCanvas/Title");
         if (titleObj != null)
         {
@@ -35,10 +33,10 @@ public class TitleManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(LoadingSequence());  // 로딩 코루틴 시작
+        StartCoroutine(LoadingSequence());
     }
 
-    // 씬 로딩과 프로그레스 바 업데이트를 처리하는 코루틴
+    // 씬 로딩과 UI 갱신 처리
     private IEnumerator LoadingSequence()
     {
         Debug.Log($"{GetType()}::{nameof(LoadingSequence)}");
@@ -54,7 +52,7 @@ public class TitleManager : MonoBehaviour
 
         loadingOperation.allowSceneActivation = false;
 
-        SetProgress(0.5f);
+        SetProgress(0.5f);  // 잠깐 기다렸다가 진행
         yield return new WaitForSeconds(0.5f);
 
         while (!loadingOperation.isDone)
@@ -62,25 +60,25 @@ public class TitleManager : MonoBehaviour
             float progress = Mathf.Clamp01(loadingOperation.progress);
             SetProgress(progress);
 
-            // 로딩 완료 직전까지 진행
+            // 로딩 완료 상태 처리
             if (progress >= 0.9f && !_isLoadingComplete)
             {
                 _isLoadingComplete = true;
-                // 로딩중 텍스트 끄기
-                _progressBarText.gameObject.SetActive(false);
-                // 로딩 완료 텍스트 켜기
-                _loadingCompleteText.gameObject.SetActive(true); 
 
-                // 메시지 및 애니메이션 표시
+                _progressBarText.gameObject.SetActive(false);
+                _loadingCompleteText.gameObject.SetActive(true);
+
                 _pressAnyKeyText.gameObject.SetActive(true);
-                _pressAnyKeyAnimator.SetBool("isLoadingComplete",true);
-                // 유저 입력 대기
+                _pressAnyKeyAnimator.SetTrigger("isLoadingComplete");
+
                 StartCoroutine(WaitForAnyKey(loadingOperation));
             }
 
             yield return null;
         }
     }
+
+    // 유저 키 입력 대기
     private IEnumerator WaitForAnyKey(AsyncOperation loadingOperation)
     {
         while (!Input.anyKeyDown)
@@ -88,24 +86,23 @@ public class TitleManager : MonoBehaviour
             yield return null;
         }
 
-        // 트리거 실행
+        // 애니메이션 후 씬 전환
         if (_titleAnimator != null)
         {
             _titleAnimator.SetTrigger("isButtonPressed");
         }
 
-        // 잠깐 대기 후 씬 전환
         yield return new WaitForSeconds(1f);
         loadingOperation.allowSceneActivation = true;
     }
 
-
-    // 프로그레스 바 UI를 업데이트하는 함수
+    // 로딩 진행도 + 점 애니메이션 처리
     private void SetProgress(float value)
     {
         _progressBar.value = value;
-        dotCount = (dotCount + 1) % 4; // 0~3 반복
-        string dots = new string('.', dotCount);
+
+        _dotCount = (_dotCount + 1) % 4;
+        string dots = new string('.', _dotCount);
         _progressBarText.text = $"LOADING{dots}";
     }
 }
