@@ -1,9 +1,9 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// ¾À Á¾·ù¸¦ Á¤ÀÇÇÏ´Â ¿­°ÅÇü
+// ì”¬ ì¢…ë¥˜ë¥¼ ì •ì˜í•˜ëŠ” ì—´ê±°í˜•
 public enum ESceneType
 {
     Title,
@@ -11,37 +11,37 @@ public enum ESceneType
     InGame
 }
 
-// ¾À ·ÎµùÀ» ´ã´çÇÏ´Â ½Ì±ÛÅæ ¸Å´ÏÀú Å¬·¡½º
+// ì”¬ ë¡œë”©ì„ ë‹´ë‹¹í•˜ëŠ” ì‹±ê¸€í†¤ ë§¤ë‹ˆì € í´ë˜ìŠ¤
 public class SceneLoader : SingletonBehaviour<SceneLoader>
 {
-    // ÃÊ±âÈ­ ÇÔ¼ö (½Ì±ÛÅæ »ı¼º ½Ã ÀÚµ¿ È£Ãâ)
+    // ì´ˆê¸°í™” í•¨ìˆ˜ (ì‹±ê¸€í†¤ ìƒì„± ì‹œ ìë™ í˜¸ì¶œ)
     protected override void Init()
     {
         base.Init();
-        Debug.Log("¾À ·Î´õ ÃÊ±âÈ­ ¿Ï·á");
+        Debug.Log("ì”¬ ë¡œë” ì´ˆê¸°í™” ì™„ë£Œ");
     }
 
-    // ¾ÀÀ» µ¿±âÀûÀ¸·Î Áï½Ã ·Îµå
+    // ì”¬ì„ ë™ê¸°ì ìœ¼ë¡œ ì¦‰ì‹œ ë¡œë“œ
     public void LoadScene(ESceneType sceneType)
     {
-        Debug.Log($"{sceneType} ¾À ·ÎµåµÊ (µ¿±âÀû)");
+        Debug.Log($"{sceneType} ì”¬ ë¡œë“œë¨ (ë™ê¸°ì )");
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneType.ToString());
     }
 
-    // ÇöÀç ¾ÀÀ» ´Ù½Ã ·Îµå
+    // í˜„ì¬ ì”¬ì„ ë‹¤ì‹œ ë¡œë“œ
     public void ReloadScene()
     {
         string currentScene = SceneManager.GetActiveScene().name;
-        Debug.Log($"{currentScene} ¾À ´Ù½Ã ·ÎµåµÊ");
+        Debug.Log($"{currentScene} ì”¬ ë‹¤ì‹œ ë¡œë“œë¨");
         Time.timeScale = 1f;
         SceneManager.LoadScene(currentScene);
     }
 
-    // ¾ÀÀ» ºñµ¿±âÀûÀ¸·Î ·Îµå (·Îµù Áß UI µî Ã³¸® °¡´É)
+    // ì”¬ì„ ë¹„ë™ê¸°ì ìœ¼ë¡œ ë¡œë“œ (ë¡œë”© ì¤‘ UI ë“± ì²˜ë¦¬ ê°€ëŠ¥)
     public AsyncOperation LoadSceneAsync(ESceneType sceneType)
     {
-        Debug.Log($"{sceneType} ¾À ·ÎµåµÊ (ºñµ¿±âÀû)");
+        Debug.Log($"{sceneType} ì”¬ ë¡œë“œë¨ (ë¹„ë™ê¸°ì )");
         Time.timeScale = 1f;
         return SceneManager.LoadSceneAsync(sceneType.ToString());
     }
