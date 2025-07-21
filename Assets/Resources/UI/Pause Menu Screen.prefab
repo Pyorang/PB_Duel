@@ -383,7 +383,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
   m_Color: {r: 1, g: 1, b: 1, a: 0}
+=======
+  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
+>>>>>>> 1288563 (How To Play, Sound Setting 제작)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -434,9 +438,15 @@ RectTransform:
   - {fileID: 65573305607768711}
   m_Father: {fileID: 2479200958268946012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
+=======
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 252.5, y: -182}
+>>>>>>> 1288563 (How To Play, Sound Setting 제작)
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9060477623824040786
@@ -1165,6 +1175,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8610692606993298864}
   - component: {fileID: 675623037000879850}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 2337478179009103174}
+  - component: {fileID: 827565329330031559}
+>>>>>>> 1288563 (How To Play, Sound Setting 제작)
   m_Layer: 0
   m_Name: Layout Group
   m_TagString: Untagged
@@ -1218,6 +1233,47 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+<<<<<<< HEAD
+=======
+--- !u!222 &2337478179009103174
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946122874154808681}
+  m_CullTransparentMesh: 1
+--- !u!114 &827565329330031559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946122874154808681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+>>>>>>> 1288563 (How To Play, Sound Setting 제작)
 --- !u!1 &6569936093799259577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,9 +1501,15 @@ RectTransform:
   - {fileID: 1832803640563435474}
   m_Father: {fileID: 2479200958268946012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
+=======
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 252.5, y: -52}
+>>>>>>> 1288563 (How To Play, Sound Setting 제작)
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4491994417323816839
@@ -1590,7 +1652,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
   m_Color: {r: 1, g: 1, b: 1, a: 0}
+=======
+  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
+>>>>>>> 1288563 (How To Play, Sound Setting 제작)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1641,9 +1707,15 @@ RectTransform:
   - {fileID: 2364272453157414820}
   m_Father: {fileID: 2479200958268946012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
+=======
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 252.5, y: -442}
+>>>>>>> 1288563 (How To Play, Sound Setting 제작)
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5042791817968399238
@@ -1762,9 +1834,15 @@ RectTransform:
   - {fileID: 1660879673957909951}
   m_Father: {fileID: 2479200958268946012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
+=======
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 252.5, y: -312}
+>>>>>>> 1288563 (How To Play, Sound Setting 제작)
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2819755951624946632
