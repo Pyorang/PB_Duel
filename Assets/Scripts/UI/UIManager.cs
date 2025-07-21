@@ -48,7 +48,7 @@ public class UIManager : SingletonBehaviour<UIManager>
     }
 
     // UI 열기: 존재하면 재사용, 아니면 새로 생성 후 활성화
-    public void OpenUI<T>(BaseUIData data) where T : BaseUI
+    public void OpenUI<T>(BaseUIData data = null) where T : BaseUI
     {
         var uiType = typeof(T);
         Debug.Log($"{GetType()}::{nameof(OpenUI)}({uiType})");
@@ -70,7 +70,7 @@ public class UIManager : SingletonBehaviour<UIManager>
         ui.Init(CanvasTransform);
         ui.transform.SetSiblingIndex(CanvasTransform.childCount - 1); // 최상단 배치
         ui.gameObject.SetActive(true);
-        ui.SetData(data);
+        if(!(data is null)) ui.SetData(data);
         ui.Show();
 
         _frontUI = ui;
