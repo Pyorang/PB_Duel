@@ -342,11 +342,7 @@ GameObject:
   - component: {fileID: 3433000603867068059}
   - component: {fileID: 2511814637722230599}
   m_Layer: 0
-<<<<<<< HEAD
-  m_Name: Key Button
-=======
   m_Name: How To Play Button
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -575,8 +571,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
-=======
 --- !u!1 &1944553742062146171
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +646,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
 --- !u!1 &1968312355108220592
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,9 +674,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-<<<<<<< HEAD
-  m_Children: []
-=======
   m_Children:
   - {fileID: 3743488497893274395}
   - {fileID: 8035113482417512049}
@@ -691,17 +681,12 @@ RectTransform:
   - {fileID: 4183521329288038888}
   - {fileID: 3796338849759840666}
   - {fileID: 5198742177995243227}
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
   m_Father: {fileID: 6878357803114797266}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-<<<<<<< HEAD
-  m_SizeDelta: {x: 0, y: 0}
-=======
   m_SizeDelta: {x: -100, y: -100}
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7176698222859778735
 MonoBehaviour:
@@ -720,11 +705,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-<<<<<<< HEAD
-  m_ChildAlignment: 1
-=======
   m_ChildAlignment: 3
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
   m_Spacing: 50
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -790,8 +771,6 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
-<<<<<<< HEAD
-=======
 --- !u!1 &2488068647812293093
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,7 +807,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
 --- !u!1 &2963593291914401406
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,8 +928,6 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
-<<<<<<< HEAD
-=======
 --- !u!1 &3036853529811890380
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +964,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
 --- !u!1 &3517565212763766859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,8 +1137,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &3852074656064460111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,7 +1377,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
 --- !u!1 &4168234336893263464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,11 +1410,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 0, y: 0.00061798}
-  m_SizeDelta: {x: 1415, y: 876.67}
-  m_Pivot: {x: 0, y: 0.5}
-=======
   m_AnchoredPosition: {x: 0, y: 0.00061035156}
   m_SizeDelta: {x: 1415, y: 876.67}
   m_Pivot: {x: 0, y: 0.5}
@@ -1618,7 +1585,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
 --- !u!1 &4432589969933503938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,8 +1650,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
-<<<<<<< HEAD
-=======
 --- !u!1 &5002065582193998277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,7 +1912,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
 --- !u!1 &5579816994980821177
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,8 +1977,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
-<<<<<<< HEAD
-=======
 --- !u!1 &5712462717768975063
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,7 +2238,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
 --- !u!1 &6549157648703969057
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,11 +2378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
-  m_text: Key
-=======
   m_text: How To Play
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2493,8 +2449,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &6644943660753418062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,7 +2675,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
 --- !u!1 &7437545318508270111
 GameObject:
   m_ObjectHideFlags: 0
@@ -2947,8 +2900,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-<<<<<<< HEAD
-=======
 --- !u!1 &8617290183695160165
 GameObject:
   m_ObjectHideFlags: 0
@@ -3210,7 +3161,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
->>>>>>> 1288563 (How To Play, Sound Setting 제작)
 --- !u!1 &8911001359297932211
 GameObject:
   m_ObjectHideFlags: 0
