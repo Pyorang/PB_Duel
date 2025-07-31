@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class Pin_Rotating : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class Pin_Rotating : MonoBehaviour
         StartCoroutine(RotateCoroutine());
     }
 
-    private System.Collections.IEnumerator RotateCoroutine()
+    private IEnumerator RotateCoroutine()
     {
         while (true)
         {
