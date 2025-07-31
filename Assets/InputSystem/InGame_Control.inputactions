@@ -1,0 +1,94 @@
+{
+    "name": "InGame_Control",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "edd5717b-7c35-43ca-bed4-3c14f3060ac1",
+            "actions": [
+                {
+                    "name": "LLeft Flipper",
+                    "type": "Button",
+                    "id": "e8d9c9fa-7f3e-489b-9136-d50e7aedee25",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LRight Flipper",
+                    "type": "Button",
+                    "id": "ed299bd6-375f-4bc9-ada0-08df9183a8f3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RLeft Flipper",
+                    "type": "Button",
+                    "id": "f9a9bf94-2a4b-431c-8d1c-523f8328b2f4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RRight Flipper",
+                    "type": "Button",
+                    "id": "e7d5c88b-f304-448c-8bc6-775a4a3cd66a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "39b13b5b-3d9c-456e-af47-04f778b987b9",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LLeft Flipper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0fc6f1b-db8b-4ba2-9f98-d7a40e4804b4",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LRight Flipper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d6eb4de5-5860-476f-a80a-a9e7f01f0fd2",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RLeft Flipper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e0ec0df7-3b9c-4f80-84c1-06ae3f25a0c9",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RRight Flipper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
