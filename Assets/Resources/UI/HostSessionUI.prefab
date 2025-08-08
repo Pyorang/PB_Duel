@@ -1693,6 +1693,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2727641901847547775, guid: 801aa6e1451457e4488b33c6e018838a, type: 3}
       insertIndex: -1
       addedObject: {fileID: -7807608854439247750}
+    - targetCorrespondingSourceObject: {fileID: 2727641901847547775, guid: 801aa6e1451457e4488b33c6e018838a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2650913256556951671}
   m_SourcePrefab: {fileID: 100100000, guid: 801aa6e1451457e4488b33c6e018838a, type: 3}
 --- !u!224 &2887122467751519427 stripped
 RectTransform:
@@ -1709,6 +1712,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3850305761366068873, guid: 801aa6e1451457e4488b33c6e018838a, type: 3}
   m_PrefabInstance: {fileID: 9147921340449378843}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5934006406463344414 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3218422949376728325, guid: 801aa6e1451457e4488b33c6e018838a, type: 3}
+  m_PrefabInstance: {fileID: 9147921340449378843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6523779459457068844 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2628676284705602871, guid: 801aa6e1451457e4488b33c6e018838a, type: 3}
@@ -1738,4 +1752,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimOnOpen: {fileID: 0}
-  backButton: {fileID: 6523779459457068844}
+  _backButton: {fileID: 6523779459457068844}
+  _createButton: {fileID: 5934006406463344414}
+--- !u!114 &2650913256556951671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6568911438699257188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78189ae736303c04e8845fc2922a35c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sessionNameInputField: {fileID: 5965058647432383174}
+  _isPrivateToggle: {fileID: 8557630507373848817}
+  _passwordInputField: {fileID: 5972539231560295223}

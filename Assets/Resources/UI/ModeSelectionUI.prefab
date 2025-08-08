@@ -977,9 +977,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimOnOpen: {fileID: 0}
-  hostButton: {fileID: 7307410581210969075}
-  joinButton: {fileID: 6646709452619061513}
-  backButton: {fileID: 2245785449587744520}
+  _hostButton: {fileID: 7307410581210969075}
+  _joinButton: {fileID: 6646709452619061513}
+  _backButton: {fileID: 2245785449587744520}
+  _inputField: {fileID: 210232896509202424}
 --- !u!114 &6646709452619061513 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2511814637722230599, guid: 43a1730f1a8b2b84e8d7781f1831f7b2, type: 3}

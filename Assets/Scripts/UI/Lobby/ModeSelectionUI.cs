@@ -1,20 +1,30 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 /*
+ * ModeSelectionUI 프리팹에 붙는 스크립트
  * Mode Selection의 상호작용 UI 기능을 정의한 클래스
  */
 
 public class ModeSelectionUI : BaseUI
 {
     [SerializeField]
-    private Button hostButton, joinButton, backButton;
+    private Button _hostButton, _joinButton, _backButton;
+    [SerializeField]
+    private TMP_InputField _inputField;
 
     private void Start()
     {
-        hostButton.onClick.AddListener(OnClickHostButton);
-        joinButton.onClick.AddListener(OnClickJoinButton);
-        backButton.onClick.AddListener(OnClickCloseButton);
+        _hostButton.onClick.AddListener(OnClickHostButton);
+        _joinButton.onClick.AddListener(OnClickJoinButton);
+        _backButton.onClick.AddListener(OnClickCloseButton);
+
+    }
+
+    public string GetHostName()
+    {
+        return _inputField.text;
     }
 
     public void OnClickHostButton()
@@ -25,6 +35,6 @@ public class ModeSelectionUI : BaseUI
     public void OnClickJoinButton()
     {
         UIManager.Instance.OpenUI<JoinSessionUI>();
-        //MatchMaker.Instance.TryJoinLobby();
+        MatchMaker.Instance.TryJoinLobby();
     }
 }
