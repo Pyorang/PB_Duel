@@ -3,9 +3,15 @@ using System.Collections;
 
 public class Pin_Kicker : MonoBehaviour
 {
-    public bool IsCoverActive { get; private set; } = false;
+    [SerializeField] private bool _isCoverActive = false;
+    public bool IsCoverActive => _isCoverActive;
 
-    public float KickForce { get; set; } = 10f;
+    [SerializeField] private float _kickForce = 10f;
+    public float KickForce
+    {
+        get => _kickForce;
+        set => _kickForce = value;
+    }
 
     [SerializeField] private GameObject _coverObject;
 
@@ -18,7 +24,7 @@ public class Pin_Kicker : MonoBehaviour
             _coverObject.SetActive(false);
         }
 
-        IsCoverActive = false;
+        _isCoverActive = false;
     }
 
     private void OnTriggerEnter(Collider p_other)
@@ -57,7 +63,7 @@ public class Pin_Kicker : MonoBehaviour
         if (ballRigidbody != null)
         {
             ballRigidbody.linearVelocity = Vector3.zero;
-            ballRigidbody.AddForce(Vector3.up * KickForce, ForceMode.Impulse);
+            ballRigidbody.AddForce(Vector3.up * _kickForce, ForceMode.Impulse);
         }
 
         yield return new WaitForSeconds(0.5f);
@@ -67,6 +73,6 @@ public class Pin_Kicker : MonoBehaviour
             _coverObject.SetActive(true);
         }
 
-        IsCoverActive = true;
+        _isCoverActive = true;
     }
 }
