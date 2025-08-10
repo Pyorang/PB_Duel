@@ -4,15 +4,7 @@ using System.Collections;
 public class Pin_Kicker : MonoBehaviour
 {
     [SerializeField] private bool _isCoverActive = false;
-    public bool IsCoverActive => _isCoverActive;
-
     [SerializeField] private float _kickForce = 10f;
-    public float KickForce
-    {
-        get => _kickForce;
-        set => _kickForce = value;
-    }
-
     [SerializeField] private GameObject _coverObject;
 
     private bool _hasKicked = false;
