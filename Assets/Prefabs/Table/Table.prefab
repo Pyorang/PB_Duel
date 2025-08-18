@@ -481,7 +481,8 @@ GameObject:
   - component: {fileID: 4814644684355352379}
   - component: {fileID: 1368498969329917258}
   - component: {fileID: 1445889672320072105}
-  - component: {fileID: 7418795861047907133}
+  - component: {fileID: 2757653230046784700}
+
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -578,7 +579,9 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7418795861047907133
+
+--- !u!54 &2757653230046784700
+
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1245,7 +1248,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2317007086326737300, guid: cb3ba8ee593378d4c87b80a9874b80a2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25987712
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 2317007086326737300, guid: cb3ba8ee593378d4c87b80a9874b80a2, type: 3}
       propertyPath: m_LocalScale.y
@@ -1253,7 +1256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2317007086326737300, guid: cb3ba8ee593378d4c87b80a9874b80a2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.27499926
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 2317007086326737300, guid: cb3ba8ee593378d4c87b80a9874b80a2, type: 3}
       propertyPath: m_LocalPosition.x
